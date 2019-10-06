@@ -7,12 +7,14 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Navbar from './components/nav/index';
 import Home from './components/home/index';
 import Details from './components/details/index';
+import Header from './components/header/index';
 
 class App extends Component {
   render () {
     return (
         <BrowserRouter>
           <div className="App">
+            <Header/>
             <Navbar/>
             <Switch>
               <Route path="/" exact component={Home}/>
