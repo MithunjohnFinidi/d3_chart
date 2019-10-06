@@ -1,0 +1,30 @@
+ul {
+    border-top: 1px solid rgba(204, 204, 204, 0.43);
+    text-align: center;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+    width: 150px;
+    color: #605E5E;
+    padding: 10px 0;
+    font: normal normal normal 16px/1.4em futura-lt-w01-light,sans-serif;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #605E5E;
+}
+
+ul li a:hover {
+    cursor: pointer;
+    color: #BC9B5D;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.currentPage {
+    color: #BC9B5D;
+    font-weight: bold;
+}
