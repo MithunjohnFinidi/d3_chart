@@ -1,143 +1,118 @@
 import React from 'react';
 import {Component} from 'react';
-import { scaleLinear } from 'd3-scale';
-import { max } from 'd3-array';
-import { select } from 'd3-selection';
-import { geoMercator, geoPath } from "d3-geo"
-import { feature } from "topojson-client";
-import { scaleThreshold } from 'd3-scale';
-import Tooltip from './tooltip'
-
-const colorScale = scaleThreshold().domain([10000,100000,500000,1000000,5000000,10000000,50000000,100000000,500000000,1500000000])
-                                    .range(["rgb(247,251,255)", "rgb(222,235,247)", "rgb(198,219,239)", "rgb(158,202,225)", "rgb(107,174,214)", "rgb(66,146,198)","rgb(33,113,181)","rgb(8,81,156)","rgb(8,48,107)","rgb(3,19,43)"])
+import * as topojson from 'topojson';
+import * as d3 from 'd3';
+import tip from 'd3-tip';
+import './style.css'
 
 class WorldMap extends Component {
 
     constructor() {
-        super();
-        this.state = {
-            worldData: [],
-            population: [],
-            populationById: [],
-            hover: "none",
-            hoveredValue: null,
-            xScale: 0,
-            yScale: 0         
-        }
-        
-        let promise1 = fetch('/worldgeo.json');
-        let promise2 = fetch('/population.json');
-
-        Promise
-            .all([
-                promise1, promise2
-            ])
-            .then(resolve => {
-                    resolve[0].json().then(worldData => {
-                        this.setState({
-                            worldData: worldData.features,
-                        })
-                    })
-
-                    resolve[1].json().then(population => {
-                        this.setState({
-                            population
-                        })
-                        population.forEach( (d)=> {
-                            debugger
-                            this.state.populationById[d.id] = +d.population.replace(/"/g, "");
-                        })
-                    })
-            });
-    }
-
-    projection = () => {
-        return geoMercator()
-          .scale(100)
-          .translate([ 800 / 2, 450 / 2 ])
-    }
-
-    componentDidMount = () => {
-        let promise1 = fetch('/worldgeo.json');
-        let promise2 = fetch('/population.json');
-
-        Promise
-            .all([
-                promise1, promise2
-            ])
-            .then(resolve => {
-                    resolve[0].json().then(worldData => {
-                        this.setState({
-                            worldData: worldData.features,
-                        })
-                    })
-
-                    resolve[1].json().then(population => {
-                        this.setState({
-                            population
-                        })
-                        population.forEach( (d)=> {
-                            this.state.populationById[d.id] = +d.population.replace(/"/g, "");
-                        })
-                    })
-            });
-
-        // fetch('/worldgeo.json').then(response => {
-        //     if (response.status !== 200) {
-        //         console.log(`There was a problem: ${response.status}`)
-        //         return
-        //     }
-        //     response.json().then(worldData => {
-        //         this.setState({
-        //             worldData: worldData.features,
-        //         })
-        //     })
-        // })
-    }
-
-    handleCountryClick = (d) => {
-        debugger
-        this.setState({
-            hover: d.id,
-            hoveredValue: d,
-            xScale: window.event.clientX,
-            yScale: window.event.clientY
-        })
-        // console.log("Clicked on a country: ", this.state.worldData[countryIndex])
+      super();
+      this.state = {
+        worldData: null,
+        population: null
       }
+    }
+
+    componentWillMount() {
+
+      Promise.all([
+        d3.json("worldgeo.json"),
+        d3.json("population.json"), 
+      ]).then( response => {
+          this.setState({
+            worldData: response[0].features,
+            population: response[1]
+          })
+      })
+    }
+
+    componentDidUpdate() {
+      const  format = d3.format(",");
+      const tip1 = tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(d) {
+              return "<strong>Country: </strong><span class='details'>" + d.properties.name + "<br></span>" + "<strong>Expenses: $</strong><span class='details'>" + format(d.population) +"</span>";
+            })
+
+      var margin = {top: 0, right: 0, bottom: 0, left: 0},
+            width = 960 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom;
+
+      const color = d3.scaleThreshold()
+      .domain([10000,100000,500000,1000000,5000000,10000000,50000000,100000000,500000000,1500000000])
+      .range(["rgb(247,251,255)", "rgb(222,235,247)", "rgb(198,219,239)", "rgb(158,202,225)", "rgb(107,174,214)", "rgb(66,146,198)","rgb(33,113,181)","rgb(8,81,156)","rgb(8,48,107)","rgb(3,19,43)"])
+        
+        var path = d3.geoPath();
+
+      const svg = d3.select(this.refs.anchor)
+                .attr("width", width)
+                .attr("height", height)
+
+
+      const projection = d3.geoMercator()
+                   .scale(130)
+                  .translate( [width / 2, height / 1.5]);
+      
+      var path = d3.geoPath().projection(projection);
+
+      svg.call(tip1);
+
+      var populationById = {};
+
+      const data = this.state.worldData,
+            population = this.state.population;
+
+      population.forEach(function(d) { populationById[d.id] = +d.population.replace(/"/g, "") });
+      data.forEach(function(d) { d.population = populationById[d.id] });
+      svg.append("g")
+      .attr("class", "countries")
+    .selectAll("path")
+      .data(data)
+    .enter().append("path")
+      .attr("d", path)
+      .style("fill", function(d) { return color(populationById[d.id])})
+      .style('stroke', 'white')
+      .style('stroke-width', 1.5)
+      .style("opacity",0.8)
+      // tooltips
+        .style("stroke","white")
+        .style('stroke-width', 0.3)
+        .on('mouseover',function(d){
+          tip1.show(d, this);
+
+          d3.select(this)
+            .style("opacity", 1)
+            .style("stroke","white")
+            .style("stroke-width",3);
+        })
+        .on('mouseout', function(d){
+          tip1.hide(d);
+
+          d3.select(this)
+            .style("opacity", 0.8)
+            .style("stroke","white")
+            .style("stroke-width",0.3);
+        });
+
+  svg.append("path")
+      .datum(topojson.mesh(data, function(a, b) { return a.id !== b.id; }))
+      .attr("class", "names")
+      .attr("d", path);
+
+    }
 
     render() {
-        return (
-            <div>
-          <svg width={ 900 } height={ 450 } viewBox="0 0 800 450">
-            <g className="countries">
-              {
-                this.state.worldData.map((d,i) => (
-                  <path
-                    key={ `path-${ i }` }
-                    d={ geoPath().projection(this.projection())(d) }
-                    className="country"
-                    fill={ colorScale(this.state.populationById[d.id]) }
-                    stroke="#FFFFFF"
-                    strokeWidth={ 0.5 }
-                    onMouseEnter={ () => this.handleCountryClick(d) }
-                    onMouseOut={ () => this.setState({hoveredValue: null}) }
-                    style={{stroke: this.state.hover === d.id ? "white" : colorScale(this.state.populationById[d.id]), strokeWidth: 1.5 }}
-                  />
-                ))
-              }
-            </g>
-          </svg>
-          { this.state.hoveredValue ?
-            <Tooltip
-              hoveredBar={this.state.hoveredValue}
-              scales={{ xScale : this.state.xScale, yScale:this.state.yScale }}
-            /> :
-            null
-          }
-          </div>
-        )
-      }
+      const {worldData, population} = this.state;
+      return (
+        <svg width="960px" height="600px">
+          <g ref="anchor"/>
+        </svg>
+      )
+        
+    }
 }
 
 export default WorldMap;
