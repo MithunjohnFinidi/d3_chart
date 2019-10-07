@@ -1,10 +1,14 @@
 import React from 'react';
 import {Component} from 'react';
+import WorldMap from '../worldmap/index'
 
 class Home extends Component {
     render() {
         return (
-            <h1>home</h1>
+            <div>
+                <h1>home</h1>
+                <WorldMap/>
+            </div>
         )
         
     }
