@@ -1,0 +1,109 @@
+import React from 'react';
+import {Component} from 'react';
+import * as d3 from 'd3';
+import tip from 'd3-tip';
+
+class Donut extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            data: null
+        }
+    }
+
+    componentDidMount() {
+        
+        if(this.props.data.focus.length !== 0) {
+            this.setState({
+                data: this.props.data.focus
+            })
+            this.drawDonut();
+        }
+    }
+
+    drawDonut = () => {
+        let data = this.props.data.focus;
+
+        const  format = d3.format(",");
+        const tip1 = tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(d) {
+              return "<strong>Country: </strong><span class='details'>" + d.data.sector + "<br></span>" + "<strong>Expenses: </strong><span class='details'>" + d.value +"%</span>";
+            })
+
+        var width = 400,
+            height = 400,
+            radius = Math.min(width, height) / 2,
+            labelr = radius + 40,
+            outerRadius = radius - 10,
+            innerRadius = radius - 70;
+
+        var arc = d3.arc()
+            .outerRadius(outerRadius)
+            .innerRadius(innerRadius);
+
+        var pie = d3.pie()
+            .sort(null)
+            .value(function (d) {
+                return d.percentage;
+            })
+            .padAngle(0);
+
+            var svg = d3.select('#donutChart')
+            .append("svg")
+            .attr("preserveAspectRatio", "xMinYMin meet")
+            .attr("viewBox", "0 0 " + width + " " + height)
+            .append("g")
+            .attr("transform",
+                "translate(" + width / 2 + "," + height / 2 + ") scale(0.7, 0.7)");
+
+                svg.call(tip1);
+
+        var g = svg.selectAll(".arc")
+            .data(pie(data))
+            .enter().append("g")
+            .attr("class", "arc");
+
+        var newArcs = g.append("path")
+            .attr("d", arc)
+            .style("fill", function (d) { return "#" + (d.data.color || d.data.sector_color); })
+        var [firstArc, ...lastArc] = newArcs._groups[0];
+        firstArc.style.opacity = 1;
+        firstArc.setAttribute("transform", 'scale(1.025,1.025)');
+        firstArc.style.stroke = "#eee"
+        firstArc.style.strokeWidth = "1px"
+        lastArc.forEach((item) => {
+            item.style.transform = 'scale(1, 1)';
+            item.style.stroke = "#eee"
+            item.style.strokeWidth = "1px"
+        })
+        var that = this;
+        newArcs.on('mouseover', function(d) {
+            d3.select("g").selectAll("path")
+                .style('transform', 'scale(1,1)')
+                .style('opacity', 1);
+
+            let current = d3.event.target;
+            current.style.transform = 'scale(1.025,1.025)';
+            current.style.stroke = "#eee"
+            current.style.strokeWidth = "1px"
+
+            tip1.show(d, this);
+
+          d3.select(this)
+            .style("opacity", 1)
+            .style("stroke","white")
+            .style("stroke-width",3);
+        })
+    }
+
+    render() {
+        return (
+            <div id="donutChart"></div>
+        )
+    }
+}
+
+export default Donut;

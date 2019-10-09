@@ -1,0 +1,37 @@
+{
+    "india": {
+        "focus": [
+            {
+                "sector":"Accelerate structural transformations",
+                "sector_color":"0265b5",
+                "sector_name":"Accelerate structural transformations",
+                "theme_budget":"316583758.00",
+                "percentage":"84.44",
+                "theme_expense":"215842600.00"
+            },
+            {
+                "sector":"Eradicate poverty in all its forms and dimensions",
+                "sector_color":"013B69",
+                "sector_name":"Eradicate poverty in all its forms and dimensions",
+                "theme_budget":"53530958.00",
+                "percentage":"14.28",
+                "theme_expense":"24155207.00"
+            },
+            {"sector":"Build resilience to shocks and crisis",
+                "sector_color":"078FFC",
+                "sector_name":"Build resilience to shocks and crisis",
+                "theme_budget":"4675992.00",
+                "percentage":"1.25",
+                "theme_expense":"4037753.00"
+            },
+            {
+                "sector":"Others",
+                "sector_color":"808080",
+                "sector_name":"Others",
+                "theme_budget":"151200.00",
+                "percentage":"0.04",
+                "theme_expense":"52715.00"
+            }
+        ]
+    }
+}
