@@ -54,7 +54,8 @@ class Donut extends Component {
             var svg = d3.select('#donutChart')
             .append("svg")
             .attr("preserveAspectRatio", "xMinYMin meet")
-            .attr("viewBox", "0 0 " + width + " " + height)
+            .attr("width", width)
+            .attr("height", height)
             .append("g")
             .attr("transform",
                 "translate(" + width / 2 + "," + height / 2 + ") scale(0.7, 0.7)");
@@ -97,6 +98,15 @@ class Donut extends Component {
             .style("stroke","white")
             .style("stroke-width",3);
         })
+
+        newArcs.on('mouseout', function(d){
+            tip1.hide(d);
+  
+            d3.select(this)
+              .style("opacity", 0.8)
+              .style("stroke","white")
+              .style("stroke-width",0.3);
+          });
     }
 
     render() {
