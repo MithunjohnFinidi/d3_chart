@@ -3,16 +3,16 @@ import {Component} from 'react';
 import { resolve } from 'path';
 import * as d3 from 'd3';
 import Donut from '../donut/index';
+import Bar from '../bar/index';
 
 class Details extends Component {
 
     constructor() {
         super();
         this.state = {
-            donutData: null
+            donutData: null,
+            barData: null
         }
-
-        
     }
 
     componentDidMount() {
@@ -20,15 +20,20 @@ class Details extends Component {
             resolve(d3.json('./donutData.json'))
         }).then((data)=>{
             this.setState({
-                donutData: data.india
+                donutData: data.india.focus,
+                barData: data.india.donors
             })
         })
     }
     render() {
         return (
             <div>
-                <h1>Details</h1>
-                {this.state && this.state.donutData && <Donut data={this.state.donutData}/>}
+                <div>
+                    {this.state && this.state.donutData && <Donut data={this.state.donutData}/>}
+                </div>
+                <div>
+                    {this.state && this.state.barData && <Bar data={this.state.barData}/>}
+                </div>
             </div>
         )
     }

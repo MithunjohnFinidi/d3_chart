@@ -13,17 +13,16 @@ class Donut extends Component {
     }
 
     componentDidMount() {
-        
-        if(this.props.data.focus.length !== 0) {
+        if(this.props.data.length !== 0) {
             this.setState({
-                data: this.props.data.focus
+                data: this.props.data
             })
             this.drawDonut();
         }
     }
 
     drawDonut = () => {
-        let data = this.props.data.focus;
+        let data = this.props.data;
 
         const  format = d3.format(",");
         const tip1 = tip()

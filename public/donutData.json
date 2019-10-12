@@ -32,6 +32,168 @@
                 "percentage":"0.04",
                 "theme_expense":"52715.00"
             }
+        ],
+        "donors" : [
+            {
+                "name": "Germany",
+                "total_budget": 13461,
+                "total_expense": 63908178,
+                "type_level_3": "DEU",
+                "ages": [
+                    {
+                        "name": "total_budget",
+                        "value": 134619255
+                    },
+                    {
+                        "name": "total_expense",
+                        "value": 63908178
+                    }
+                ]
+            },
+            {
+                "name": "Japan",
+                "total_budget": 99769,
+                "total_expense": 75828085,
+                "type_level_3": "JPN",
+                "ages": [
+                    {
+                        "name": "total_budget",
+                        "value": 99769160
+                    },
+                    {
+                        "name": "total_expense",
+                        "value": 75828085
+                    }
+                ]
+            },
+            {
+                "name": "Italy",
+                "total_budget": 68058,
+                "total_expense": 58248767,
+                "type_level_3": "ITA",
+                "ages": [
+                    {
+                        "name": "total_budget",
+                        "value": 68058547
+                    },
+                    {
+                        "name": "total_expense",
+                        "value": 58248767
+                    }
+                ]
+            },
+            {
+                "name": "United States of America",
+                "total_budget": 55295,
+                "total_expense": 22715240,
+                "type_level_3": "USA",
+                "ages": [
+                    {
+                        "name": "total_budget",
+                        "value": 55295838
+                    },
+                    {
+                        "name": "total_expense",
+                        "value": 22715240
+                    }
+                ]
+            },
+            {
+                "name": "European Union",
+                "total_budget": 37728,
+                "total_expense": 26228302,
+                "type_level_3": "FUNDS_EU",
+                "ages": [
+                    {
+                        "name": "total_budget",
+                        "value": 37728771
+                    },
+                    {
+                        "name": "total_expense",
+                        "value": 26228302
+                    }
+                ]
+            },
+            {
+                "name": "GFATM",
+                "total_budget": 20914,
+                "total_expense": 11223877,
+                "type_level_3": "GFATM",
+                "ages": [
+                    {
+                        "name": "total_budget",
+                        "value": 20914750
+                    },
+                    {
+                        "name": "total_expense",
+                        "value": 11223877
+                    }
+                ]
+            },
+            {
+                "name": "Norway",
+                "total_budget": 14318,
+                "total_expense": 10778547,
+                "type_level_3": "NOR",
+                "ages": [
+                    {
+                        "name": "total_budget",
+                        "value": 14318360
+                    },
+                    {
+                        "name": "total_expense",
+                        "value": 10778547
+                    }
+                ]
+            },
+            {
+                "name": "UNDP Regular Resources",
+                "total_budget": 10525,
+                "total_expense": 6225503,
+                "type_level_3": "UNDP",
+                "ages": [
+                    {
+                        "name": "total_budget",
+                        "value": 10525088
+                    },
+                    {
+                        "name": "total_expense",
+                        "value": 6225503
+                    }
+                ]
+            },
+            {
+                "name": "United Kingdom",
+                "total_budget": 68631,
+                "total_expense": 2411222,
+                "type_level_3": "GBR",
+                "ages": [
+                    {
+                        "name": "total_budget",
+                        "value": 6863196
+                    },
+                    {
+                        "name": "total_expense",
+                        "value": 2411222
+                    }
+                ]
+            },
+            {
+                "name": "Sweden",
+                "total_budget": 50719,
+                "total_expense": 2425005,
+                "type_level_3": "SWE",
+                "ages": [
+                    {
+                        "name": "total_budget",
+                        "value": 5071954
+                    },
+                    {
+                        "name": "total_expense",
+                        "value": 2425005
+                    }
+                ]
+            }
         ]
     }
 }
