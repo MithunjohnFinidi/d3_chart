@@ -8,21 +8,29 @@ class Donut extends Component {
     constructor() {
         super();
         this.state = {
-            data: null
+            data: []
         }
     }
 
     componentDidMount() {
+        debugger
         if(this.props.data.length !== 0) {
-            this.setState({
+            this.state = {
                 data: this.props.data
-            })
-            this.drawDonut();
+            }
+            this.drawDonut(this.state.data);
         }
     }
 
-    drawDonut = () => {
-        let data = this.props.data;
+    componentWillReceiveProps(prevState) {
+        debugger
+        d3.select("svg").remove();
+        this.drawDonut(prevState.data);
+    }
+
+    drawDonut = (chartData) => {
+        debugger
+        let data = chartData;
 
         const  format = d3.format(",");
         const tip1 = tip()
@@ -65,10 +73,11 @@ class Donut extends Component {
             .data(pie(data))
             .enter().append("g")
             .attr("class", "arc");
-
+debugger
         var newArcs = g.append("path")
             .attr("d", arc)
             .style("fill", function (d) { return "#" + (d.data.color || d.data.sector_color); })
+            debugger
         var [firstArc, ...lastArc] = newArcs._groups[0];
         firstArc.style.opacity = 1;
         firstArc.setAttribute("transform", 'scale(1.025,1.025)');

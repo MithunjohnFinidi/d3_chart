@@ -4,6 +4,8 @@ import { resolve } from 'path';
 import * as d3 from 'd3';
 import Donut from '../donut/index';
 import Bar from '../bar/index';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown'
 
 class Details extends Component {
 
@@ -11,7 +13,8 @@ class Details extends Component {
         super();
         this.state = {
             donutData: null,
-            barData: null
+            barData: null,
+            currentCountry: "India"
         }
     }
 
@@ -20,14 +23,34 @@ class Details extends Component {
             resolve(d3.json('./donutData.json'))
         }).then((data)=>{
             this.setState({
-                donutData: data.india.focus,
-                barData: data.india.donors
+                donutData: data.India.focus,
+                barData: data.India.donors
+            })
+        })
+    }
+    handleDropdown = (e) => {
+        debugger
+        const currentCountry = e.target.text;
+        const promise = new Promise( (resolve, reject) => {
+            resolve(d3.json('./donutData.json'))
+        }).then((data)=>{
+            this.setState({
+                donutData: data[currentCountry].focus,
+                barData: data[currentCountry].donors,
+                currentCountry: currentCountry
             })
         })
     }
     render() {
         return (
             <div>
+                <DropdownButton id="dropdown-basic-button" title="Select a country">
+                    <Dropdown.Item onClick={this.handleDropdown}>India</Dropdown.Item>
+                    <Dropdown.Item onClick={this.handleDropdown}>Germany</Dropdown.Item>
+                </DropdownButton>
+                <div>
+                    <span>Current country : </span> {this.state.currentCountry}
+                </div>
                 <div>
                     {this.state && this.state.donutData && <Donut data={this.state.donutData}/>}
                 </div>
