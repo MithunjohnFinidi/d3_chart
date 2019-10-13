@@ -1,0 +1,14 @@
+.chartHead {
+    box-shadow: 0 2px 7px rgba(7,61,125,.18);
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chartWrapper {
+    vertical-align: middle;
+    border: 2px solid hsla(0,0%,87%,.94);
+    width: 60%;
+    margin: 20px auto;
+}

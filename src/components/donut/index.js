@@ -2,6 +2,7 @@ import React from 'react';
 import {Component} from 'react';
 import * as d3 from 'd3';
 import tip from 'd3-tip';
+import './style.css';
 
 class Donut extends Component {
 
@@ -13,7 +14,6 @@ class Donut extends Component {
     }
 
     componentDidMount() {
-        debugger
         if(this.props.data.length !== 0) {
             this.state = {
                 data: this.props.data
@@ -29,7 +29,6 @@ class Donut extends Component {
     }
 
     drawDonut = (chartData) => {
-        debugger
         let data = chartData;
 
         const  format = d3.format(",");

@@ -15,18 +15,24 @@ class Bar extends Component {
 
     componentDidMount() {
         if(this.props.data && this.props.data.length !== 0) {
-            this.setState({
+            this.state = {
                 data: this.props.data
-            })
-            this.drawBarChart();
+            }
+            this.drawBarChart(this.state.data);
         }
     }
 
-    drawBarChart = () => {
-        let data = this.props.data;
+    componentWillReceiveProps(prevState) {
+        d3.select("#barChart svg").remove();
+        this.drawBarChart(prevState.data);
+    }
+
+
+    drawBarChart = (barChartData) => {
+        let data = barChartData;
 
         var margin = {top: 40, right: 20, bottom: 30, left: 40},
-            width = 960 - margin.left - margin.right,
+            width = 760 - margin.left - margin.right,
             height = 500 - margin.top - margin.bottom;
 
         var formatPercent = d3.format(".0%");
@@ -78,7 +84,7 @@ class Bar extends Component {
             .enter().append("rect")
             .attr("class", "bar")
             .attr("x", function(d) { return x(d.name); })
-            .attr("width", 70)
+            .attr("width", 50)
             .attr("y", function(d) { return y(d.total_budget); })
             .attr("height", function(d) { return height - y(d.total_budget); })
             .on('mouseover', tip1.show)

@@ -233,7 +233,7 @@
         "donors" : [
             {
                 "name": "Germany",
-                "total_budget": 13461,
+                "total_budget": 99769,
                 "total_expense": 63908178,
                 "type_level_3": "DEU",
                 "ages": [
@@ -249,7 +249,7 @@
             },
             {
                 "name": "Japan",
-                "total_budget": 99769,
+                "total_budget": 13461,
                 "total_expense": 75828085,
                 "type_level_3": "JPN",
                 "ages": [

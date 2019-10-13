@@ -5,7 +5,8 @@ import * as d3 from 'd3';
 import Donut from '../donut/index';
 import Bar from '../bar/index';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown'
+import Dropdown from 'react-bootstrap/Dropdown';
+import './style.css'
 
 class Details extends Component {
 
@@ -48,13 +49,18 @@ class Details extends Component {
                     <Dropdown.Item onClick={this.handleDropdown}>India</Dropdown.Item>
                     <Dropdown.Item onClick={this.handleDropdown}>Germany</Dropdown.Item>
                 </DropdownButton>
-                <div>
-                    <span>Current country : </span> {this.state.currentCountry}
-                </div>
-                <div>
+                <div className="chartWrapper">
+                    <span className="chartHead">
+                        <span>Our Focus</span>
+                        <span>{this.state.currentCountry}</span>
+                    </span>
                     {this.state && this.state.donutData && <Donut data={this.state.donutData}/>}
                 </div>
-                <div>
+                <div className="chartWrapper">
+                    <span className="chartHead">
+                        <span>Our Donors</span>
+                        <span>{this.state.currentCountry}</span>
+                    </span>
                     {this.state && this.state.barData && <Bar data={this.state.barData}/>}
                 </div>
             </div>
