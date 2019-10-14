@@ -1,0 +1,890 @@
+{
+    "nodes": [
+        {
+            "name": "Non-DAC and programme governments",
+            "code": 0,
+            "color": "9c766d"
+        },
+        {
+            "name": "Pooled Funding",
+            "code": 1,
+            "color": "f8c486"
+        },
+        {
+            "name": "Vertical Funding",
+            "code": 2,
+            "color": "f59942"
+        },
+        {
+            "name": "Other Multilaterals",
+            "code": 3,
+            "color": "cdbcdb"
+        },
+        {
+            "name": "DAC Donors",
+            "code": 4,
+            "color": "5b8cc0"
+        },
+        {
+            "name": "Private Sector/Foundations/NGOs",
+            "code": 5,
+            "color": "f6aaa9"
+        },
+        {
+            "name": "Financing Institutions",
+            "code": 6,
+            "color": "d25053"
+        },
+        {
+            "name": "UN Agencies",
+            "code": 7,
+            "color": "afe69e"
+        },
+        {
+            "name": "European Union",
+            "code": 8,
+            "color": "61b353"
+        },
+        {
+            "name": "UNDP Regular Resources",
+            "code": 9,
+            "color": "8d8fd4"
+        },
+        {
+            "name": "Africa",
+            "code": 10,
+            "color": "f2c1d9"
+        },
+        {
+            "name": "Arab States",
+            "code": 11,
+            "color": "d0d0d0"
+        },
+        {
+            "name": "Asia and the Pacific",
+            "code": 12,
+            "color": "949494"
+        },
+        {
+            "name": "Europe and CIS",
+            "code": 13,
+            "color": "dce198"
+        },
+        {
+            "name": "Global and Others",
+            "code": 14,
+            "color": "00ced1"
+        },
+        {
+            "name": "Latin America & the Caribbean",
+            "code": 15,
+            "color": "bfc739"
+        },
+        {
+            "name": "Eradicate poverty in all its forms and dimensions",
+            "code": 16,
+            "color": "013B69"
+        },
+        {
+            "name": "Accelerate structural transformations",
+            "code": 17,
+            "color": "0265b5"
+        },
+        {
+            "name": "Build resilience to shocks and crisis",
+            "code": 18,
+            "color": "078FFC"
+        },
+        {
+            "name": "Others",
+            "code": 19,
+            "color": "808080"
+        },
+        {
+            "name": " Others",
+            "code": 20,
+            "color": "",
+            "short_name": "Others"
+        },
+        {
+            "name": "Strengthen effective, inclusive and accountable governance",
+            "code": 21,
+            "color": "215384",
+            "short_name": "Governance"
+        },
+        {
+            "name": "Keeping people out of poverty",
+            "code": 22,
+            "color": "D63837",
+            "short_name": "Poverty"
+        },
+        {
+            "name": "Promote nature-based solutions for a sustainable planet",
+            "code": 23,
+            "color": "537543",
+            "short_name": "Environment"
+        },
+        {
+            "name": "Enhance national prevention and recovery capacities for resilient societies",
+            "code": 24,
+            "color": "E0763A",
+            "short_name": "Resilience"
+        },
+        {
+            "name": "Strenghten gender equality and the empowerment of women and girls",
+            "code": 25,
+            "color": "DC5037",
+            "short_name": "Gender"
+        },
+        {
+            "name": "Close the energy gap",
+            "code": 26,
+            "color": "F1B545",
+            "short_name": "Energy"
+        }
+    ],
+    "links": [
+        {
+            "source_name": "DAC Donors",
+            "target_name": "Asia and the Pacific",
+            "value": 591790580,
+            "source": 4,
+            "target": 12
+        },
+        {
+            "source_name": "Private Sector/Foundations/NGOs",
+            "target_name": "Africa",
+            "value": 3021673,
+            "source": 5,
+            "target": 10
+        },
+        {
+            "source_name": "European Union",
+            "target_name": "Europe and CIS",
+            "value": 103209428,
+            "source": 8,
+            "target": 13
+        },
+        {
+            "source_name": "UN Agencies",
+            "target_name": "Arab States",
+            "value": 51279330,
+            "source": 7,
+            "target": 11
+        },
+        {
+            "source_name": "DAC Donors",
+            "target_name": "Arab States",
+            "value": 477121949,
+            "source": 4,
+            "target": 11
+        },
+        {
+            "source_name": "Private Sector/Foundations/NGOs",
+            "target_name": "Europe and CIS",
+            "value": 4163484,
+            "source": 5,
+            "target": 13
+        },
+        {
+            "source_name": "European Union",
+            "target_name": "Africa",
+            "value": 46584545,
+            "source": 8,
+            "target": 10
+        },
+        {
+            "source_name": "UN Agencies",
+            "target_name": "Asia and the Pacific",
+            "value": 15818862,
+            "source": 7,
+            "target": 12
+        },
+        {
+            "source_name": "DAC Donors",
+            "target_name": "Africa",
+            "value": 142030041,
+            "source": 4,
+            "target": 10
+        },
+        {
+            "source_name": "European Union",
+            "target_name": "Arab States",
+            "value": 114180147,
+            "source": 8,
+            "target": 11
+        },
+        {
+            "source_name": "UN Agencies",
+            "target_name": "Europe and CIS",
+            "value": 6568675,
+            "source": 7,
+            "target": 13
+        },
+        {
+            "source_name": "Private Sector/Foundations/NGOs",
+            "target_name": "Asia and the Pacific",
+            "value": 16011606,
+            "source": 5,
+            "target": 12
+        },
+        {
+            "source_name": "DAC Donors",
+            "target_name": "Europe and CIS",
+            "value": 95350608,
+            "source": 4,
+            "target": 13
+        },
+        {
+            "source_name": "European Union",
+            "target_name": "Asia and the Pacific",
+            "value": 60445649,
+            "source": 8,
+            "target": 12
+        },
+        {
+            "source_name": "UN Agencies",
+            "target_name": "Africa",
+            "value": 32437461,
+            "source": 7,
+            "target": 10
+        },
+        {
+            "source_name": "Private Sector/Foundations/NGOs",
+            "target_name": "Arab States",
+            "value": 8127397,
+            "source": 5,
+            "target": 11
+        },
+        {
+            "source_name": "Private Sector/Foundations/NGOs",
+            "target_name": "Global and Others",
+            "value": 5547110,
+            "source": 5,
+            "target": 14
+        },
+        {
+            "source_name": "DAC Donors",
+            "target_name": "Latin America & the Caribbean",
+            "value": 81640931,
+            "source": 4,
+            "target": 15
+        },
+        {
+            "source_name": "European Union",
+            "target_name": "Global and Others",
+            "value": 8454981,
+            "source": 8,
+            "target": 14
+        },
+        {
+            "source_name": "UN Agencies",
+            "target_name": "Latin America & the Caribbean",
+            "value": 16970787,
+            "source": 7,
+            "target": 15
+        },
+        {
+            "source_name": "DAC Donors",
+            "target_name": "Global and Others",
+            "value": 156478474,
+            "source": 4,
+            "target": 14
+        },
+        {
+            "source_name": "Private Sector/Foundations/NGOs",
+            "target_name": "Latin America & the Caribbean",
+            "value": 18998520,
+            "source": 5,
+            "target": 15
+        },
+        {
+            "source_name": "UN Agencies",
+            "target_name": "Global and Others",
+            "value": 29070734,
+            "source": 7,
+            "target": 14
+        },
+        {
+            "source_name": "European Union",
+            "target_name": "Latin America & the Caribbean",
+            "value": 18898723,
+            "source": 8,
+            "target": 15
+        },
+        {
+            "source_name": "Vertical Funding",
+            "target_name": "Europe and CIS",
+            "value": 84327794,
+            "source": 2,
+            "target": 13
+        },
+        {
+            "source_name": "UNDP Regular Resources",
+            "target_name": "Global and Others",
+            "value": 40826544,
+            "source": 9,
+            "target": 14
+        },
+        {
+            "source_name": "Financing Institutions",
+            "target_name": "Arab States",
+            "value": 113777204,
+            "source": 6,
+            "target": 11
+        },
+        {
+            "source_name": "Other Multilaterals",
+            "target_name": "Global and Others",
+            "value": 131724,
+            "source": 3,
+            "target": 14
+        },
+        {
+            "source_name": "Vertical Funding",
+            "target_name": "Africa",
+            "value": 411991958,
+            "source": 2,
+            "target": 10
+        },
+        {
+            "source_name": "Financing Institutions",
+            "target_name": "Asia and the Pacific",
+            "value": 792861,
+            "source": 6,
+            "target": 12
+        },
+        {
+            "source_name": "Non-DAC and programme governments",
+            "target_name": "Global and Others",
+            "value": 7760875,
+            "source": 0,
+            "target": 14
+        },
+        {
+            "source_name": "Pooled Funding",
+            "target_name": "Latin America & the Caribbean",
+            "value": 38563027,
+            "source": 1,
+            "target": 15
+        },
+        {
+            "source_name": "Financing Institutions",
+            "target_name": "Europe and CIS",
+            "value": 1431699,
+            "source": 6,
+            "target": 13
+        },
+        {
+            "source_name": "Vertical Funding",
+            "target_name": "Arab States",
+            "value": 52107129,
+            "source": 2,
+            "target": 11
+        },
+        {
+            "source_name": "Other Multilaterals",
+            "target_name": "Latin America & the Caribbean",
+            "value": 435144,
+            "source": 3,
+            "target": 15
+        },
+        {
+            "source_name": "UNDP Regular Resources",
+            "target_name": "Latin America & the Caribbean",
+            "value": 33170951,
+            "source": 9,
+            "target": 15
+        },
+        {
+            "source_name": "Pooled Funding",
+            "target_name": "Global and Others",
+            "value": 11857365,
+            "source": 1,
+            "target": 14
+        },
+        {
+            "source_name": "Financing Institutions",
+            "target_name": "Africa",
+            "value": 2788365,
+            "source": 6,
+            "target": 10
+        },
+        {
+            "source_name": "Vertical Funding",
+            "target_name": "Asia and the Pacific",
+            "value": 243031188,
+            "source": 2,
+            "target": 12
+        },
+        {
+            "source_name": "Non-DAC and programme governments",
+            "target_name": "Latin America & the Caribbean",
+            "value": 798244760,
+            "source": 0,
+            "target": 15
+        },
+        {
+            "source_name": "UNDP Regular Resources",
+            "target_name": "Africa",
+            "value": 270993229,
+            "source": 9,
+            "target": 10
+        },
+        {
+            "source_name": "Non-DAC and programme governments",
+            "target_name": "Europe and CIS",
+            "value": 234048651,
+            "source": 0,
+            "target": 13
+        },
+        {
+            "source_name": "Other Multilaterals",
+            "target_name": "Africa",
+            "value": 233819,
+            "source": 3,
+            "target": 10
+        },
+        {
+            "source_name": "Pooled Funding",
+            "target_name": "Arab States",
+            "value": 117042789,
+            "source": 1,
+            "target": 11
+        },
+        {
+            "source_name": "Financing Institutions",
+            "target_name": "Latin America & the Caribbean",
+            "value": 5930629,
+            "source": 6,
+            "target": 15
+        },
+        {
+            "source_name": "UNDP Regular Resources",
+            "target_name": "Europe and CIS",
+            "value": 15301652,
+            "source": 9,
+            "target": 13
+        },
+        {
+            "source_name": "Vertical Funding",
+            "target_name": "Global and Others",
+            "value": 79769359,
+            "source": 2,
+            "target": 14
+        },
+        {
+            "source_name": "Non-DAC and programme governments",
+            "target_name": "Africa",
+            "value": 75020641,
+            "source": 0,
+            "target": 10
+        },
+        {
+            "source_name": "Other Multilaterals",
+            "target_name": "Europe and CIS",
+            "value": 1141919,
+            "source": 3,
+            "target": 13
+        },
+        {
+            "source_name": "Pooled Funding",
+            "target_name": "Asia and the Pacific",
+            "value": 34043415,
+            "source": 1,
+            "target": 12
+        },
+        {
+            "source_name": "Other Multilaterals",
+            "target_name": "Asia and the Pacific",
+            "value": 155736,
+            "source": 3,
+            "target": 12
+        },
+        {
+            "source_name": "Pooled Funding",
+            "target_name": "Europe and CIS",
+            "value": 9132671,
+            "source": 1,
+            "target": 13
+        },
+        {
+            "source_name": "Non-DAC and programme governments",
+            "target_name": "Arab States",
+            "value": 240272664,
+            "source": 0,
+            "target": 11
+        },
+        {
+            "source_name": "UNDP Regular Resources",
+            "target_name": "Asia and the Pacific",
+            "value": 72911141,
+            "source": 9,
+            "target": 12
+        },
+        {
+            "source_name": "Vertical Funding",
+            "target_name": "Latin America & the Caribbean",
+            "value": 166678533,
+            "source": 2,
+            "target": 15
+        },
+        {
+            "source_name": "Pooled Funding",
+            "target_name": "Africa",
+            "value": 238494699,
+            "source": 1,
+            "target": 10
+        },
+        {
+            "source_name": "Other Multilaterals",
+            "target_name": "Arab States",
+            "value": 1745599,
+            "source": 3,
+            "target": 11
+        },
+        {
+            "source_name": "Non-DAC and programme governments",
+            "target_name": "Asia and the Pacific",
+            "value": 82239904,
+            "source": 0,
+            "target": 12
+        },
+        {
+            "source_name": "UNDP Regular Resources",
+            "target_name": "Arab States",
+            "value": 47472020,
+            "source": 9,
+            "target": 11
+        },
+        {
+            "source_name": "Financing Institutions",
+            "target_name": "Global and Others",
+            "value": 1233,
+            "source": 6,
+            "target": 14
+        },
+        {
+            "source_name": "Asia and the Pacific",
+            "target_name": "Accelerate structural transformations",
+            "value": 655730873,
+            "source": 12,
+            "target": 17
+        },
+        {
+            "source_name": "Asia and the Pacific",
+            "target_name": "Build resilience to shocks and crisis",
+            "value": 61492542,
+            "source": 12,
+            "target": 18
+        },
+        {
+            "source_name": "Asia and the Pacific",
+            "target_name": "Others",
+            "value": 31685618,
+            "source": 12,
+            "target": 19
+        },
+        {
+            "source_name": "Asia and the Pacific",
+            "target_name": "Eradicate poverty in all its forms and dimensions",
+            "value": 355726425,
+            "source": 12,
+            "target": 16
+        },
+        {
+            "source_name": "Latin America & the Caribbean",
+            "target_name": "Build resilience to shocks and crisis",
+            "value": 82058012,
+            "source": 15,
+            "target": 18
+        },
+        {
+            "source_name": "Africa",
+            "target_name": "Accelerate structural transformations",
+            "value": 241773376,
+            "source": 10,
+            "target": 17
+        },
+        {
+            "source_name": "Global and Others",
+            "target_name": "Others",
+            "value": 54678598,
+            "source": 14,
+            "target": 19
+        },
+        {
+            "source_name": "Europe and CIS",
+            "target_name": "Accelerate structural transformations",
+            "value": 136682656,
+            "source": 13,
+            "target": 17
+        },
+        {
+            "source_name": "Global and Others",
+            "target_name": "Build resilience to shocks and crisis",
+            "value": 24955796,
+            "source": 14,
+            "target": 18
+        },
+        {
+            "source_name": "Arab States",
+            "target_name": "Accelerate structural transformations",
+            "value": 169978627,
+            "source": 11,
+            "target": 17
+        },
+        {
+            "source_name": "Latin America & the Caribbean",
+            "target_name": "Others",
+            "value": 42733174,
+            "source": 15,
+            "target": 19
+        },
+        {
+            "source_name": "Global and Others",
+            "target_name": "Accelerate structural transformations",
+            "value": 45601962,
+            "source": 14,
+            "target": 17
+        },
+        {
+            "source_name": "Europe and CIS",
+            "target_name": "Others",
+            "value": 19721376,
+            "source": 13,
+            "target": 19
+        },
+        {
+            "source_name": "Arab States",
+            "target_name": "Build resilience to shocks and crisis",
+            "value": 610057285,
+            "source": 11,
+            "target": 18
+        },
+        {
+            "source_name": "Africa",
+            "target_name": "Others",
+            "value": 198274715,
+            "source": 10,
+            "target": 19
+        },
+        {
+            "source_name": "Africa",
+            "target_name": "Build resilience to shocks and crisis",
+            "value": 157291413,
+            "source": 10,
+            "target": 18
+        },
+        {
+            "source_name": "Latin America & the Caribbean",
+            "target_name": "Accelerate structural transformations",
+            "value": 404063293,
+            "source": 15,
+            "target": 17
+        },
+        {
+            "source_name": "Arab States",
+            "target_name": "Others",
+            "value": 84327843,
+            "source": 11,
+            "target": 19
+        },
+        {
+            "source_name": "Europe and CIS",
+            "target_name": "Build resilience to shocks and crisis",
+            "value": 62151489,
+            "source": 13,
+            "target": 18
+        },
+        {
+            "source_name": "Global and Others",
+            "target_name": "Eradicate poverty in all its forms and dimensions",
+            "value": 173370429,
+            "source": 14,
+            "target": 16
+        },
+        {
+            "source_name": "Latin America & the Caribbean",
+            "target_name": "Eradicate poverty in all its forms and dimensions",
+            "value": 630264446,
+            "source": 15,
+            "target": 16
+        },
+        {
+            "source_name": "Europe and CIS",
+            "target_name": "Eradicate poverty in all its forms and dimensions",
+            "value": 332664595,
+            "source": 13,
+            "target": 16
+        },
+        {
+            "source_name": "Africa",
+            "target_name": "Eradicate poverty in all its forms and dimensions",
+            "value": 562551447,
+            "source": 10,
+            "target": 16
+        },
+        {
+            "source_name": "Arab States",
+            "target_name": "Eradicate poverty in all its forms and dimensions",
+            "value": 333507664,
+            "source": 11,
+            "target": 16
+        },
+        {
+            "source_name": "Accelerate structural transformations",
+            "target_name": "Strengthen effective, inclusive and accountable governance",
+            "value": 867031092,
+            "source": 17,
+            "target": 21
+        },
+        {
+            "source_name": "Build resilience to shocks and crisis",
+            "target_name": "Strenghten gender equality and the empowerment of women and girls",
+            "value": 307715,
+            "source": 18,
+            "target": 25
+        },
+        {
+            "source_name": "Accelerate structural transformations",
+            "target_name": "Keeping people out of poverty",
+            "value": 268470031,
+            "source": 17,
+            "target": 22
+        },
+        {
+            "source_name": "Others",
+            "target_name": "Other Signature Solutions",
+            "value": 600291514,
+            "source": 19,
+            "target": 20
+        },
+        {
+            "source_name": "Accelerate structural transformations",
+            "target_name": "Promote nature-based solutions for a sustainable planet",
+            "value": 149758973,
+            "source": 17,
+            "target": 23
+        },
+        {
+            "source_name": "Build resilience to shocks and crisis",
+            "target_name": "Other Signature Solutions",
+            "value": 95788478,
+            "source": 18,
+            "target": 20
+        },
+        {
+            "source_name": "Build resilience to shocks and crisis",
+            "target_name": "Keeping people out of poverty",
+            "value": 556980864,
+            "source": 18,
+            "target": 22
+        },
+        {
+            "source_name": "Eradicate poverty in all its forms and dimensions",
+            "target_name": "Enhance national prevention and recovery capacities for resilient societies",
+            "value": 21780065,
+            "source": 16,
+            "target": 24
+        },
+        {
+            "source_name": "Build resilience to shocks and crisis",
+            "target_name": "Promote nature-based solutions for a sustainable planet",
+            "value": 11430799,
+            "source": 18,
+            "target": 23
+        },
+        {
+            "source_name": "Accelerate structural transformations",
+            "target_name": "Other Signature Solutions",
+            "value": 135449585,
+            "source": 17,
+            "target": 20
+        },
+        {
+            "source_name": "Eradicate poverty in all its forms and dimensions",
+            "target_name": "Close the energy gap",
+            "value": 31820357,
+            "source": 16,
+            "target": 26
+        },
+        {
+            "source_name": "Build resilience to shocks and crisis",
+            "target_name": "Strengthen effective, inclusive and accountable governance",
+            "value": 237491879,
+            "source": 18,
+            "target": 21
+        },
+        {
+            "source_name": "Accelerate structural transformations",
+            "target_name": "Strenghten gender equality and the empowerment of women and girls",
+            "value": 6751334,
+            "source": 17,
+            "target": 25
+        },
+        {
+            "source_name": "Eradicate poverty in all its forms and dimensions",
+            "target_name": "Strenghten gender equality and the empowerment of women and girls",
+            "value": 30497442,
+            "source": 16,
+            "target": 25
+        },
+        {
+            "source_name": "Accelerate structural transformations",
+            "target_name": "Close the energy gap",
+            "value": 79897874,
+            "source": 17,
+            "target": 26
+        },
+        {
+            "source_name": "Eradicate poverty in all its forms and dimensions",
+            "target_name": "Other Signature Solutions",
+            "value": 212912963,
+            "source": 16,
+            "target": 20
+        },
+        {
+            "source_name": "Accelerate structural transformations",
+            "target_name": "Enhance national prevention and recovery capacities for resilient societies",
+            "value": 146471898,
+            "source": 17,
+            "target": 24
+        },
+        {
+            "source_name": "Build resilience to shocks and crisis",
+            "target_name": "Enhance national prevention and recovery capacities for resilient societies",
+            "value": 92060690,
+            "source": 18,
+            "target": 24
+        },
+        {
+            "source_name": "Eradicate poverty in all its forms and dimensions",
+            "target_name": "Keeping people out of poverty",
+            "value": 1072864530,
+            "source": 16,
+            "target": 22
+        },
+        {
+            "source_name": "Eradicate poverty in all its forms and dimensions",
+            "target_name": "Promote nature-based solutions for a sustainable planet",
+            "value": 297949965,
+            "source": 16,
+            "target": 23
+        },
+        {
+            "source_name": "Eradicate poverty in all its forms and dimensions",
+            "target_name": "Strengthen effective, inclusive and accountable governance",
+            "value": 720259684,
+            "source": 16,
+            "target": 21
+        },
+        {
+            "source_name": "Build resilience to shocks and crisis",
+            "target_name": "Close the energy gap",
+            "value": 3946112,
+            "source": 18,
+            "target": 26
+        }
+    ]
+}
