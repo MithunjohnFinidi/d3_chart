@@ -1,0 +1,28 @@
+.legend_container {
+    display: flex;
+    flex-direction: row;
+    width: 71%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.legend_row {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #444;
+}
+
+.legend_row_title {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.legend_row_desc {
+    font-size: 10px;
+}
+
+.sankey_container {
+    margin-bottom: 20px;
+    background: #f9f8f8;
+}

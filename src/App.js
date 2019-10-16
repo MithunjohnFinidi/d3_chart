@@ -8,6 +8,7 @@ import Navbar from './components/nav/index';
 import Home from './components/home/index';
 import Details from './components/details/index';
 import Header from './components/header/index';
+import Footer from './components/footer/index';
 
 class App extends Component {
   render () {
@@ -21,6 +22,7 @@ class App extends Component {
               <Route path="/home" component={Home}/>
               <Route path="/details" component={Details}/>
             </Switch>
+            <Footer/>
           </div>
         </BrowserRouter>
     );
