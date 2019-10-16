@@ -38,7 +38,7 @@ class Donut extends Component {
               return "<strong>Country: </strong><span class='details'>" + d.data.sector + "<br></span>" + "<strong>Expenses: </strong><span class='details'>" + d.value +"%</span>";
             })
 
-        var width = 400,
+        var width = 650,
             height = 400,
             radius = Math.min(width, height) / 2,
             labelr = radius + 40,
@@ -56,16 +56,23 @@ class Donut extends Component {
             })
             .padAngle(0);
 
-            var svg = d3.select('#donutChart')
+        var svg = d3.select('#donutChart')
             .append("svg")
             .attr("preserveAspectRatio", "xMinYMin meet")
             .attr("width", width)
             .attr("height", height)
             .append("g")
             .attr("transform",
-                "translate(" + width / 2 + "," + height / 2 + ") scale(0.7, 0.7)");
+                "translate(" + width / 3 + "," + height / 2 + ") scale(0.7, 0.7)");
 
                 svg.call(tip1);
+
+        svg.append("circle").attr("cx",200).attr("cy",130).attr("r", 6).style("fill", "#346287")
+        svg.append("circle").attr("cx",200).attr("cy",160).attr("r", 6).style("fill", "#078ffc")
+        svg.append("circle").attr("cx",200).attr("cy",190).attr("r", 6).style("fill", "#0265b5")
+        svg.append("text").attr("x", 220).attr("y", 130).text("Eradicate povery in all its forms and dimensions").style("font-size", "15px").attr("alignment-baseline","middle")
+        svg.append("text").attr("x", 220).attr("y", 160).text("Build resilence to shocks and crisis").style("font-size", "15px").attr("alignment-baseline","middle")
+        svg.append("text").attr("x", 220).attr("y", 190).text("Accelerate structural transformations").style("font-size", "15px").attr("alignment-baseline","middle")
 
         var g = svg.selectAll(".arc")
             .data(pie(data))

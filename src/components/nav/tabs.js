@@ -5,12 +5,10 @@ import './style.css';
 
 class Tabs extends Component {
     onChange = () => {
-        debugger
         this.props.onChange(this.props.name)
     }
 
     render() {
-        debugger
         const {isActive, link, content} = this.props;
         return (
             <li className={isActive ? 'tab-active': ''} onClick={this.onChange}>
