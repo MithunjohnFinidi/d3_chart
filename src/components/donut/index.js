@@ -23,7 +23,6 @@ class Donut extends Component {
     }
 
     componentWillReceiveProps(prevState) {
-        debugger
         d3.select("svg").remove();
         this.drawDonut(prevState.data);
     }
@@ -72,11 +71,9 @@ class Donut extends Component {
             .data(pie(data))
             .enter().append("g")
             .attr("class", "arc");
-debugger
         var newArcs = g.append("path")
             .attr("d", arc)
             .style("fill", function (d) { return "#" + (d.data.color || d.data.sector_color); })
-            debugger
         var [firstArc, ...lastArc] = newArcs._groups[0];
         firstArc.style.opacity = 1;
         firstArc.setAttribute("transform", 'scale(1.025,1.025)');

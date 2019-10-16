@@ -1,27 +1,50 @@
 ul {
-    border-top: 1px solid rgba(204, 204, 204, 0.43);
     text-align: center;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    padding: 0px;
 }
 
 ul li {
     list-style-type: none;
     display: inline-block;
-    width: 150px;
+    width: 50%;
     color: #605E5E;
     padding: 10px 0;
     font: normal normal normal 16px/1.4em futura-lt-w01-light,sans-serif;
+    border-bottom: 2px solid rgba(204, 204, 204, 0.43);
+}
+
+ul li:hover {
+    color: #4d8dc4;
+    background-color: #eee;
+    border-bottom: 2px solid #4d8dc4;
+    cursor: pointer;
 }
 
 ul li a {
     text-decoration: none;
     color: #605E5E;
+    display: inline-block;
+    padding: 10px 50px;
+    border-radius:4px;
 }
 
 ul li a:hover {
     cursor: pointer;
-    color: #BC9B5D;
-    font-weight: bold;
     text-decoration: none;
+    color: #4d8dc4;
+}
+
+.tab-active {
+    border-bottom: 2px solid #4d8dc4;
+}
+
+.tab-active a,
+.tab-active a:hover {
+    font-weight: bold;
+    color: #4d8dc4;
 }
 
 .currentPage {
