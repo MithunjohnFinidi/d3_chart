@@ -108,6 +108,16 @@ class Donut extends Component {
             .style("opacity", 1)
             .style("stroke","white")
             .style("stroke-width",3);
+            let g = d3.select(this.parentElement)
+        .style("cursor", "pointer")
+        .append("g")
+        .attr("class", "text-group");
+  
+      g.append("text")
+        .attr("class", "value-text")
+        .text(`${d.data.percentage}%`)
+        .attr('text-anchor', 'middle')
+        .attr('dy', '.6em');
         })
 
         newArcs.on('mouseout', function(d){
@@ -117,6 +127,10 @@ class Donut extends Component {
               .style("opacity", 0.8)
               .style("stroke","white")
               .style("stroke-width",0.3);
+
+              d3.select(this.parentElement)
+            .style("cursor", "none")  
+            .select(".text-group").remove();
           });
     }
 
