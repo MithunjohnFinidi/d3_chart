@@ -41,7 +41,7 @@ class Bar extends Component {
             .attr('class', 'd3-tip')
             .offset([-10, 0])
             .html(function(d) {
-              return "<strong>Country: </strong><span class='details'>" + d.name + "<br></span>" + "<strong>Expenses: </strong><span class='details'>" + d.total_budget +"%</span>";
+              return "<strong>Country: </strong><span class='details'>" + d.name + "<br></span>" + "<strong>Budget: </strong><span class='details'>$" + d.total_budget +"</span>";
             })
 
         var x = d3.scaleBand()

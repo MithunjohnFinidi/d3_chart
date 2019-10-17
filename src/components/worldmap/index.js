@@ -34,7 +34,7 @@ class WorldMap extends Component {
             .attr('class', 'd3-tip')
             .offset([-10, 0])
             .html(function(d) {
-              return "<strong>Country: </strong><span class='details'>" + d.properties.name + "<br></span>" + "<strong>Expenses: $</strong><span class='details'>" + format(d.population) +"</span>";
+              return "<strong>Country: </strong><span class='details'>" + d.properties.name + "<br></span>" + "<strong>Budget: $</strong><span class='details'>" + format(d.population) +"</span>";
             })
 
       var margin = {top: 0, right: 0, bottom: 0, left: 0},

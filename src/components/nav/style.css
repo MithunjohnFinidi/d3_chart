@@ -11,7 +11,7 @@ ul li {
     display: inline-block;
     width: 50%;
     color: #605E5E;
-    padding: 10px 0;
+    padding: 5px 0;
     font: normal normal normal 16px/1.4em futura-lt-w01-light,sans-serif;
     border-bottom: 2px solid rgba(204, 204, 204, 0.43);
 }

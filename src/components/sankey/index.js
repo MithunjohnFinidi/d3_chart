@@ -62,9 +62,9 @@ class Sankey extends Component {
                 .attr("class", "link")
                 .attr("d", d3_sankey.sankeyLinkHorizontal())
                 .attr("stroke-width", function(d) { return Math.max(1, d.width); });
-        
-            link1.append("title")
-                .text(function(d) { return d.source.name + " → " + d.target.name + "\n" + format(d.value); });
+
+                link1.append("title")
+                .text(function(d) { return d.source.name + " → " + d.target.name + "\n$" + d.value; });
         
             var node1 = node
                 .data(energy.nodes)
